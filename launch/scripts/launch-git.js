@@ -1,7 +1,6 @@
 const open = require("open");
 const git = require("simple-git")();
 const { fromPairs } = require("lodash");
-
 const toast = require("@/utils/toast");
 
 module.exports = async () => {

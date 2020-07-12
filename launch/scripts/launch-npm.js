@@ -1,7 +1,6 @@
 const path = require("path");
 const open = require("open");
 const npmName = require("npm-name");
-
 const toast = require("@/utils/toast");
 
 module.exports = async () => {

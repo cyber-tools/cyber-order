@@ -19,4 +19,12 @@ program
   .description("打开npm页面")
   .action(require("@/launch/scripts/launch-npm"));
 
+program
+  .command("all")
+  .description("打开npm和git远程仓库")
+  .action(async () => {
+    await require("@/launch/scripts/launch-git")();
+    await require("@/launch/scripts/launch-npm")();
+  });
+
 program.parse(process.argv);
