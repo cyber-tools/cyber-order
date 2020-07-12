@@ -1,11 +1,8 @@
-const simpleGit = require("simple-git");
 const inquirer = require("inquirer");
 
-const git = simpleGit();
 
 module.exports = async () => {
   try {
-    await git.init();
     const { action } = await inquirer.prompt({
       type: "list",
       name: "action",

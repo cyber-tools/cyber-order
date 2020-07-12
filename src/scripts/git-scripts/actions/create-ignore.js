@@ -10,10 +10,17 @@ const hasIgnoreFile = require("../utils/hasIgnoreFile");
 const git = simpleGit();
 
 module.exports = async () => {
-  console.log(await hasIgnoreFile());
+  if (await hasIgnoreFile()) {
+    toast.warn("该项目已存在.gitignore文件");
+    return false;
+  };
   try {
-    console.log("");
+    toast.start("正在写入文件");
+    const writeFilePath = path.join(process.cwd(), ".gitignore");
+    await promisify(fs.writeFile)(writeFilePath, template);
+    toast.succeed("写入成功!");
   } catch (error) {
+    toast.fail("写入失败!");
     throw error;
   }
 };
