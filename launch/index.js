@@ -13,5 +13,3 @@ process.on("unhandledRejection", (error) => {
   console.log(error);
   process.exit(0);
 });
-
-require("@/index.js");
