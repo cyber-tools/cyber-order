@@ -8,6 +8,6 @@ module.exports = async () => {
     const stats = await promisify(fs.stat)(ignoreFilePath);
     return stats.isFile();
   } catch (error) {
-    throw error;
+    return false;
   }
 };
