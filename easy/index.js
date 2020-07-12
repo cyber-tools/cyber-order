@@ -8,7 +8,6 @@ program
   .usage("easy command")
   .version(version)
 
-
 program
   .command("git")
   .description("git命令合集")
