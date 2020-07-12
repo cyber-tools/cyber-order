@@ -5,9 +5,9 @@ const inquirer = require("inquirer");
 module.exports = async () => {
   try {
     await git.init();
-    const { command } = await inquirer.prompt({
+    const { action } = await inquirer.prompt({
       type: "list",
-      name: "command",
+      name: "action",
       default: require("@/scripts/git-scripts/fast-commit"),
       message: "选择要执行的git命令",
       choices: [{
@@ -24,7 +24,7 @@ module.exports = async () => {
         // value: () => { }
       }]
     });
-    await command()
+    await action();
   } catch (error) {
     throw error;
   };
