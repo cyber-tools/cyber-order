@@ -24,7 +24,7 @@ module.exports = async () => {
         // value: () => { }
       }]
     });
-    await command.value()
+    await command()
   } catch (error) {
     throw error;
   };
