@@ -12,7 +12,7 @@ module.exports = async () => {
       message: "选择要执行的git命令",
       choices: [{
         name: "快速提交",
-        value: require("@/scripts/git-scripts/fast-commit")
+        action: require("@/scripts/git-scripts/fast-commit")
       }, {
         name: "生成.gitignore文件",
         // value: () => { }
@@ -24,7 +24,7 @@ module.exports = async () => {
         // value: () => { }
       }]
     });
-    console.log("当前命令=>", command);
+    await command.action()
   } catch (error) {
     throw error;
   };
