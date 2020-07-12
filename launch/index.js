@@ -12,6 +12,6 @@ program
 program
   .command("git")
   .description("打开git的远程目录")
-  .action(() => { });
+  .action(require("@/launch/scripts/launch-git"));
 
 program.parse(process.argv);
