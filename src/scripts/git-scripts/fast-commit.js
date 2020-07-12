@@ -18,5 +18,5 @@ module.exports = async () => {
   } catch (error) {
     toast.fail("提交失败!");
     throw error;
-  }
+  };
 };

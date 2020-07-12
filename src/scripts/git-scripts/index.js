@@ -25,6 +25,7 @@ module.exports = async () => {
       }]
     });
     await action();
+    process.exit(0);
   } catch (error) {
     throw error;
   };
