@@ -1,6 +1,7 @@
-const git = require("simple-git")();
+const simpleGit = require("simple-git");
 const inquirer = require("inquirer");
 
+const git = simpleGit();
 
 module.exports = async () => {
   try {
@@ -8,14 +9,13 @@ module.exports = async () => {
     const { action } = await inquirer.prompt({
       type: "list",
       name: "action",
-      default: require("@/scripts/git-scripts/fast-commit"),
       message: "选择要执行的git命令",
       choices: [{
         name: "快速提交",
-        value: require("@/scripts/git-scripts/fast-commit")
+        value: require("./actions/fast-commit")
       }, {
         name: "生成.gitignore文件",
-        // value: () => { }
+        value: require("./actions/create-ignore")
       }, {
         name: "重置.gitignore",
         // value: () => { }
