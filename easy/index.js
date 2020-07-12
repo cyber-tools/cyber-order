@@ -18,5 +18,9 @@ program
   .description("npm命令合集")
   .action(require("@/easy/scripts/npm-scripts"));
 
+program
+  .command("doc")
+  .description("生成markdown模板")
+  .action(require("@/easy/scripts/doc-scripts"))
 
 program.parse(process.argv);
