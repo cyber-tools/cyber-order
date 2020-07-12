@@ -9,12 +9,13 @@ module.exports = async () => {
       await git.removeRemote("origin");
       const repoUrl = await prompt("新的远程仓库url:");
       await git.addRemote("origin", repoUrl);
+      toast.succeed("remote更新成功!");
       toast.start("正在推送,请稍后... ...");
       await git.push("origin", {
         "--all": true,
         "--set-upstream": true
       });
-      toast.succeed("remote更新成功!");
+      toast.succeed("推送成功!");
     } catch (error) {
       toast.fail("更新失败!");
       throw error;

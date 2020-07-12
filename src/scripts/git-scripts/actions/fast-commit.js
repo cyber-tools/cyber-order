@@ -1,16 +1,18 @@
 const moment = require("moment");
-const simpleGit = require("simple-git");
+const git = require("simple-git")();
+const prompt = require("prompt-promise");
 const toast = require("@/utils/toast");
 
 const comfirmPushRemote = require("../utils/comfirmPushRemote");
 
-const git = simpleGit();
 
 module.exports = async () => {
+  const defaultCommitMessage = [moment().format("YYYY年MM月DD日 HH:ss"), "的快速提交"].join("");
   try {
     await git.init();
     await git.add(".");
-    await git.commit([moment().format("YYYY年MM月DD日 HH:ss"), "的快速提交"].join(""));
+    const commitMessage = await prompt("请输入提交信息:");
+    await git.commit(commitMessage || defaultCommitMessage);
     toast.succeed("提交成功!");
     await comfirmPushRemote();
   } catch (error) {
