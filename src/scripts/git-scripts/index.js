@@ -17,8 +17,8 @@ module.exports = async () => {
         name: "重置.gitignore",
         value: require("./actions/reset-ignore")
       }, {
-        name: "替换origin",
-        // value: () => { }
+        name: "更新远程仓库(origin)",
+        value: require("./actions/update-remote")
       }]
     });
     await action();
