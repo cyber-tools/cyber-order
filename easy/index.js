@@ -14,4 +14,10 @@ program
   .description("git命令合集")
   .action(require("@/easy/scripts/git-scripts"));
 
+program
+  .command("npm")
+  .description("npm命令合集")
+  .action(require("@/easy/scripts/npm-scripts"));
+
+
 program.parse(process.argv);
