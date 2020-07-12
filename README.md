@@ -3,6 +3,7 @@
 <div align="center">Application Descriptions</div>
  
 <h2 align="center">Table Of Contents</h2>
+ 
 1. [Install](#Install)
 2. [Introduction](#Introduction)
 3. [Configuration](#Configuration)
@@ -12,7 +13,7 @@
  
 ```bash
 npm install 
- 
+```
 <h2 align="center">Introduction</h2>
  
 <h2 align="center">Commands</h2>
