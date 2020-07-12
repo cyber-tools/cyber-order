@@ -26,8 +26,11 @@ module.exports = async function appendConfigAction() {
       throw error;
     };
   } else {
-    toast.warn("当前项目不存在.npmrc文件");
-    await createNpmrc();
-    await appendConfigAction();
+    if (await popConfirm("当前项目不存在.npmrc文件,是否创建?")) {
+      await createNpmrc();
+      await appendConfigAction();
+    } else {
+      toast.succeed("complate!");
+    };
   };
 };
