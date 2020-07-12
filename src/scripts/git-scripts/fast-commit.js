@@ -11,7 +11,7 @@ module.exports = async () => {
     await git.commit([moment().format("YYYY年MM月DD日 HH:ss"), "的快速提交"].join(""));
     toast.succeed("提交成功!");
     if (await popComfirm("是否推送到远程仓库?")) {
-      toast.start();
+      toast.start("正在推送,请稍后...");
       await git.push();
     };
   } catch (error) {
