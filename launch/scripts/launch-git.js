@@ -1,6 +1,6 @@
 const open = require("open");
-const { fromPairs } = require("lodash");
 const git = require("simple-git")();
+const { fromPairs } = require("lodash");
 
 module.exports = async () => {
   try {
