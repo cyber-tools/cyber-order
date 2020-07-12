@@ -11,6 +11,9 @@ module.exports = async () => {
         name: "生成.npmrc文件",
         value: require("./actions/create-npmrc")
       }, {
+        name: "追加指定的.npmrc配置",
+        value: require("./actions/append-npmrc")
+      }, {
         name: "生成.npmignore文件",
         value: require("./actions/create-npmignore")
       }]
