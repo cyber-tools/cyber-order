@@ -15,7 +15,7 @@ module.exports = async () => {
         value: require("./actions/create-ignore")
       }, {
         name: "重置.gitignore",
-        // value: () => { }
+        value: require("./actions/reset-ignore")
       }, {
         name: "替换origin",
         // value: () => { }
