@@ -4,7 +4,7 @@ const prompt = require("prompt-promise");
 const toast = require("@/utils/toast");
 
 const hasIgnoreFile = require("../utils/hasIgnoreFile");
-const comfirmPushRemote = require("../utils/comfirmPushRemote");
+const confirmPushRemote = require("../utils/confirmPushRemote");
 
 
 module.exports = async () => {
@@ -16,7 +16,7 @@ module.exports = async () => {
       const commitMessage = await prompt("请输入提交信息:");
       await git.commit(commitMessage || defaultCommitMessage);
       toast.succeed("提交成功!");
-      await comfirmPushRemote();
+      await confirmPushRemote();
     } catch (error) {
       toast.fail("提交失败!");
       throw error;

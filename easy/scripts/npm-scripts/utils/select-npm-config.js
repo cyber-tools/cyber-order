@@ -1,21 +1,26 @@
 const inquirer = require("inquirer");
+const { fromPairs } = require("lodash");
+
 
 module.exports = async () => {
   const { config } = await inquirer.prompt({
-    type: "list",
     name: "config",
+    type: "checkbox",
     message: "选择追加的npm配置",
     choices: [{
-      name: "sass_binary",
+      name: "sass镜像",
       value: {
-        sass_binary_site: "https://npm.taobao.org/mirrors/node-sass/"
+        name: "sass_binary_site",
+        value: "https://npm.taobao.org/mirrors/node-sass/"
       }
     }, {
-      name: "electron_mirror",
+      name: "electron镜像",
       value: {
-        electron_mirror: "https://npm.taobao.org/mirrors/electron/"
+        name: "electron_mirror",
+        value: "https://npm.taobao.org/mirrors/electron/"
       }
     }]
   });
-  return config;
+  const pairs = config.map(({ name, value }) => [name, value]);
+  return fromPairs(pairs);
 };
