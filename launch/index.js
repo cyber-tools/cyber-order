@@ -1,15 +1,17 @@
 #!/usr/bin/env node
-const path = require("path");
-const { addAlias } = require("module-alias");
+require("../utils/initial");
+const { program } = require("commander");
+const { name, version } = require("@/package.json");
 
-addAlias("@", path.resolve(__dirname, "src"));
+program
+  .name(name)
+  .usage("launch command")
+  .version(version)
 
-process.on("uncaughtException", (error) => {
-  console.log(error);
-  process.exit(0);
-});
 
-process.on("unhandledRejection", (error) => {
-  console.log(error);
-  process.exit(0);
-});
+program
+  .command("git")
+  .description("打开git的远程目录")
+  .action(() => { });
+
+program.parse(process.argv);
