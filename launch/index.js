@@ -14,4 +14,9 @@ program
   .description("打开git的远程目录")
   .action(require("@/launch/scripts/launch-git"));
 
+program
+  .command("npm")
+  .description("打开npm页面")
+  .action(require("@/launch/scripts/launch-npm"));
+
 program.parse(process.argv);
