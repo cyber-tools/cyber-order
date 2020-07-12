@@ -1,0 +1,5 @@
+/dist/
+/example/
+.gitignore
+.eslintignore
+package-lock.json
