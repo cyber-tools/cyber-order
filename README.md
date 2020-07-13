@@ -10,10 +10,10 @@
   Table Of Contents
 </h2>
 
-1. [Install](#Install)
-4. [Commands](#Commands)
-   1. [easy](#easy)
-   2. [launch](#launch)
+1. [Install](#--Install)
+4. [Commands](#--Commands)
+   1. [easy](#--easy)
+   2. [launch](#--launch)
 
 <h2 align="center">
   Install
