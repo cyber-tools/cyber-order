@@ -11,9 +11,11 @@
 </h2>
 
 1. [Install](#--Install)
-4. [Commands](#--Commands)
-   1. [easy](#--easy)
-   2. [launch](#--launch)
+2. [Commands](#--Commands)
+
+   - [easy](#--easy)
+   - [launch](#--launch)
+   - [doc](#--doc)
 
 <h2 align="center">
   Install
@@ -41,7 +43,13 @@ easy git
 easy npm
 ```
 
+- doc脚本合集：
 
+```bash
+easy doc
+```
+
+  
 
 > <div>launch命令</div>
 
