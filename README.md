@@ -13,9 +13,8 @@
 1. [Install](#--Install)
 2. [Commands](#--Commands)
 
-   - [easy](#--easy)
-   - [launch](#--launch)
-   - [doc](#--doc)
+   - [easy command](#--easy command)
+   - [launch command](#--launch command)
 
 <h2 align="center">
   Install
@@ -30,7 +29,7 @@ npm install nice-web-work/work-scripts -g
   Commands
 </h2>
 
-> <div>easy命令</div>
+> <div>easy command</div>
 
 - 封装之后的git脚本:
 
@@ -51,7 +50,7 @@ easy doc
 
   
 
-> <div>launch命令</div>
+> <div>launch command</div>
 
 - 拉起当前模块所属的npm页面:
 
