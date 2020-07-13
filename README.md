@@ -28,7 +28,7 @@ npm install nice-web-work/work-scripts -g
   Commands
 </h2>
 
-> <div>easy命令</div>
+> <h4>easy命令</h4>
 
 - 封装之后的git脚本:
 
@@ -49,7 +49,7 @@ easy doc
 
   
 
-> <div>launch命令</div>
+> <h4>launch命令</h4>
 
 - 拉起当前模块所属的npm页面:
 
