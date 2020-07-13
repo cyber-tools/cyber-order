@@ -10,8 +10,8 @@
   Table Of Contents
 </h2>
 
-1. [Install](#Install)
-2. [Commands](#Commands)
+1. [Install](#--Install)
+2. [Commands](#--Commands)
    - [easy 命令](#easy命令)
    - [launch 命令](#launch命令)
 
