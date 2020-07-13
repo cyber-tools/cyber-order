@@ -2,9 +2,15 @@
   work-scripts
 </h2>
 
+<div align="center">
+  这是做项目的时候使用的简易脚本,其中包含npm相关的脚本和封装后的git命令
+</div>
+
+<h2 align="center">
+  Table Of Contents
+</h2>
+
 1. [Install](#Install)
-2. [Introduction](#Introduction)
-3. [Configuration](#Configuration)
 4. [Commands](#Commands)
    1. [easy](#easy)
    2. [launch](#launch)
@@ -16,13 +22,7 @@
 ```bash
 npm install nice-web-work/work-scripts -g
 ```
-<h2 align="center">
-  Introduction
-</h2>
 
-<div align="center">
-  这是做项目的时候使用的简易脚本,其中包含npm相关的脚本和封装后的git命令
-</div>
 
 <h2 align="center">
   Commands
