@@ -6,8 +6,8 @@
 2. [Introduction](#Introduction)
 3. [Configuration](#Configuration)
 4. [Commands](#Commands)
-   1. [easy]()
-   2. [launch]()
+   1. [easy](#easy)
+   2. [launch](#launch)
 
 <h2 align="center">
   Install
