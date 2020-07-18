@@ -1,5 +1,4 @@
 const inquirer = require("inquirer");
-const { sync } = require("cross-spawn");
 
 module.exports = async () => {
   const { versionType } = await inquirer.prompt({
@@ -21,5 +20,5 @@ module.exports = async () => {
       value: "patch"
     }]
   });
-  await sync("npm", ["version", versionType], { stdio: "inherit" })
+  return versionType;
 };
