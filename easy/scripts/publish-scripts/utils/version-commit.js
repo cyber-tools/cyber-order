@@ -9,7 +9,7 @@ module.exports = async () => {
       await git.init();
       await git.add(".");
       await git.commit([version, "版本发布"].join(""));
-      console.log("当前版本", version);
+      await git.push();
     } catch (error) {
       throw error;
     };

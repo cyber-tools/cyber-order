@@ -7,9 +7,11 @@ module.exports = async () => {
   try {
     const versionType = await selectVersionType();
     await versionCommit();
-    await sync("npm", ["version", versionType], { stdio: "inherit" });
+    sync("npm", ["version", versionType], { stdio: "inherit" });
     toast.start("开始发布npm包... ...");
+    sync("npm", ["publish"]);
+    toast.succeed("发布成功!");
   } catch (error) {
     throw error;
-  }
+  };
 };
