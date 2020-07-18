@@ -1,12 +1,12 @@
 const inquirer = require("inquirer");
 
 
-module.exports = async (message = "是否同意") => {
-  const comfirm = await inquirer.prompt({
+module.exports = async (message = "是否同意", defaultOption = true) => {
+  const { confirm } = await inquirer.prompt({
     type: "confirm",
-    name: "comfirm",
-    default: true,
+    name: "confirm",
+    default: defaultOption,
     message: message
   });
-  return comfirm;
+  return confirm;
 };
