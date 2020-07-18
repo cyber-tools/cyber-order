@@ -1,9 +1,15 @@
 const { sync } = require("cross-spawn");
 const toast = require("@/utils/toast");
+const { name } = require("@/package.json");
+const isPackageName = require("@/utils/isPackageName");
 const versionCommit = require("./version-commit");
 const selectVersionType = require("./select-version-type");
 
 module.exports = async () => {
+  if (!(await isPackageName())) {
+    toast.warn(["包名", name, "不符合规范!"].join(""));
+    process.exit(0);
+  };
   try {
     const versionType = await selectVersionType();
     await versionCommit();

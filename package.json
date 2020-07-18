@@ -26,7 +26,8 @@
     "ora": "^4.0.4",
     "prompt-promise": "^1.0.3",
     "shelljs": "^0.8.4",
-    "simple-git": "^2.12.0"
+    "simple-git": "^2.12.0",
+    "validate-npm-package-name": "^3.0.0"
   },
   "bin": {
     "easy": "./easy/index.js",
