@@ -9,7 +9,7 @@ module.exports = async () => {
     await versionCommit();
     sync("npm", ["version", versionType], { stdio: "inherit" });
     toast.start("开始发布npm包... ...");
-    sync("npm", ["publish"]);
+    sync("npm", ["publish"], { stdio: "inherit" });
     toast.succeed("发布成功!");
   } catch (error) {
     throw error;

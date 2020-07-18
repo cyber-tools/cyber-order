@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 
+
+// https://www.cnblogs.com/mengfangui/p/11463177.html
+
 module.exports = async () => {
   const { versionType } = await inquirer.prompt({
     type: "list",
