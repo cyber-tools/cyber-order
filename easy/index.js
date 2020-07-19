@@ -23,9 +23,5 @@ program
   .description("生成markdown模板")
   .action(require("@/easy/scripts/doc-scripts"));
 
-program
-  .command("publish")
-  .description("发布脚本")
-  .action(require("@/easy/scripts/publish-scripts"));
 
 program.parse(process.argv);
