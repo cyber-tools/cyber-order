@@ -1,7 +1,7 @@
 
 
 module.exports = [
-  "/dist/",
+  "/src/",
   "/example/",
   ".gitignore",
   ".eslintignore",
