@@ -7,10 +7,10 @@ const hasIgnoreFile = require("../utils/hasIgnoreFile");
 module.exports = async () => {
   if (await hasIgnoreFile()) {
     try {
-      toast.start("解除文件提交历史... ...");
+      toast.start("正在解除... ...");
       await git.rm(["-r", "--cached", "."]);
+      toast.succeed("解除成功!");
       await fastCommit();
-      toast.succeed("重置成功!");
     } catch (error) {
       toast.fail("重置失败!");
       throw error;
