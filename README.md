@@ -1,5 +1,5 @@
 <h2 align="center">
-  work-scripts
+  @cyber/work-cli
 </h2>
 
 <div align="center">
@@ -12,7 +12,7 @@
 
 1. [Install](#--Install)
 2. [Commands](#--Commands)
-   - [easy 命令](#easy命令)
+   - [easy 命令](#cyber命令)
    - [launch 命令](#launch命令)
 
 <h2 align="center">
@@ -20,7 +20,7 @@
 </h2>
 
 ```bash
-npm install nice-web-work/work-scripts -g
+npm install cyber-worker/work-cli -g
 ```
 
 
