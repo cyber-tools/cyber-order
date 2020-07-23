@@ -1,5 +1,5 @@
 {
-  "name": "work-scripts",
+  "name": "@cyber/work-cli",
   "version": "1.2.0",
   "description": "",
   "main": "index.js",
@@ -28,7 +28,7 @@
     "validate-npm-package-name": "^3.0.0"
   },
   "bin": {
-    "easy": "./easy/index.js",
+    "cyber": "./cyber/index.js",
     "launch": "./launch/index.js"
   }
 }

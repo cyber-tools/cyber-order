@@ -11,17 +11,17 @@ program
 program
   .command("git")
   .description("git命令合集")
-  .action(require("@/easy/scripts/git-scripts"));
+  .action(require("@/cyber/scripts/git-scripts"));
 
 program
   .command("npm")
   .description("npm命令合集")
-  .action(require("@/easy/scripts/npm-scripts"));
+  .action(require("@/cyber/scripts/npm-scripts"));
 
 program
   .command("doc")
   .description("生成markdown模板")
-  .action(require("@/easy/scripts/doc-scripts"));
+  .action(require("@/cyber/scripts/doc-scripts"));
 
 
 program.parse(process.argv);
