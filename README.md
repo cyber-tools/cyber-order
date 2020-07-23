@@ -28,23 +28,23 @@ npm install cyber-worker/work-cli -g
   Commands
 </h2>
 
-> <h4>easy命令</h4>
+> <h4>cyber命令</h4>
 
 - 封装之后的git脚本:
 
 ```bash
-easy git
+cyber git
 ```
 - npm脚本合集:
 
 ```bash
-easy npm
+cyber npm
 ```
 
 - doc脚本合集：
 
 ```bash
-easy doc
+cyber doc
 ```
 
   
