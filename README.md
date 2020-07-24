@@ -1,5 +1,5 @@
 <h2 align="center">
-  @cyber-tools/work-cli
+  @cyber-tools/cyber-order
 </h2>
 
 <div align="center">
@@ -20,7 +20,7 @@
 </h2>
 
 ```bash
-npm install @cyber-tools/work-cli -g
+npm install @cyber-tools/cyber-order -g
 ```
 
 
