@@ -1,13 +1,13 @@
-const fs = require("fs");
 const path = require("path");
-const { promisify } = require("es6-promisify");
+const pathExists = require("path-exists");
+
 
 module.exports = async () => {
   try {
     const readmeFilePath = path.join(process.cwd(), "README.md");
-    const stats = await promisify(fs.stat)(readmeFilePath);
-    return stats.isFile();
+    const hasReadmeFile = await pathExists(readmeFilePath);
+    return hasReadmeFile;
   } catch (error) {
-    return false;
+    throw error;
   }
 };

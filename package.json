@@ -25,6 +25,7 @@
     "npm-name": "^6.0.1",
     "open": "^7.0.4",
     "ora": "^4.0.4",
+    "path-exists": "^4.0.0",
     "prompt-promise": "^1.0.3",
     "simple-git": "^2.12.0",
     "validate-npm-package-name": "^3.0.0"

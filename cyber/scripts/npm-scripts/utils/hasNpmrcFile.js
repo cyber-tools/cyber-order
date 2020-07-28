@@ -1,13 +1,12 @@
-const fs = require("fs");
 const path = require("path");
-const { promisify } = require("es6-promisify");
+const pathExists = require("path-exists");
 
 module.exports = async () => {
   try {
     const npmrcFilePath = path.join(process.cwd(), ".npmrc");
-    const stats = await promisify(fs.stat)(npmrcFilePath);
-    return stats.isFile();
+    const hasFile = await pathExists(npmrcFilePath);
+    return hasFile;
   } catch (error) {
-    return false;
+    throw error;
   };
 };
