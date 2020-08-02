@@ -3,6 +3,7 @@
 module.exports = [
   "/src/",
   "/example/",
+  "**/.DS_Store",
   ".gitignore",
   ".babelrc.js",
   ".eslintignore",
